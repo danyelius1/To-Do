@@ -13,10 +13,10 @@ if (!$conn) {
 
 if (isset($_POST['submit'])) {
 
-    $pavadinimas = $_POST['pavadinimas'];
+    $pavadinimas = $_POST["pavadinimas"];
     $data = $_POST['data'];
     $darbai = $_POST['darbai'];
-    $sql = "INSERT INTO todoworks (pavadinimas) VALUES ($pavadinimas)";
+    $sql = "INSERT INTO todoworks (pavadinimas, data, textaria) VALUES ('$pavadinimas', '$data', '$darbai')";
 
 
     if (mysqli_query($conn, $sql)) {
@@ -27,7 +27,6 @@ if (isset($_POST['submit'])) {
 
     mysqli_close($conn);
 }
-
 
 
 ?>
@@ -45,16 +44,8 @@ if (isset($_POST['submit'])) {
     <input type="datetime-local" name="data" id="date" value="date">
     <textarea id="darbai" name="darbai" rows="4" cols="25">tema/darbai</textarea>
     <input type="submit" id="submit" name="submit" value="sukurti nauja">
-
 </form>
-
 
 
 </body>
 </html>
-
-
-
-<?php
-
-?>

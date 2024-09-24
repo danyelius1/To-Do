@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 12, 2024 at 01:36 PM
+-- Generation Time: Sep 24, 2024 at 02:35 PM
 -- Server version: 9.0.1
 -- PHP Version: 8.3.10
 
@@ -29,10 +29,21 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `todoworks` (
   `id` int NOT NULL,
-  `pavadinimas` int NOT NULL,
+  `pavadinimas` varchar(60) NOT NULL,
   `data` date NOT NULL,
-  `textaria` int NOT NULL
+  `textaria` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `todoworks`
+--
+
+INSERT INTO `todoworks` (`id`, `pavadinimas`, `data`, `textaria`) VALUES
+(2, 'thfhh', '2024-09-24', 'tema/darbaidfdfd'),
+(3, 'thfhh', '2024-09-24', 'tema/darbaidfdfd'),
+(4, 'dfgdfgdfg', '2024-09-24', 'dfgdfgdfg'),
+(5, '<?php echo \"lalala\" ?>', '2024-09-24', 'xvxcvxcvxcv'),
+(6, 'alert(\"Hello! I am an alert box!!\");', '2024-09-24', 'sdfsdfd');
 
 --
 -- Indexes for dumped tables
@@ -52,7 +63,7 @@ ALTER TABLE `todoworks`
 -- AUTO_INCREMENT for table `todoworks`
 --
 ALTER TABLE `todoworks`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
